@@ -1,0 +1,30 @@
+library("VennDiagram");
+
+venn.plot <- draw.quad.venn(
+area1 = 1400,
+area2 = 1664,
+area3 = 1729,
+area4 = 1755,
+n12 = 1242,
+n13 = 1287,
+n14 = 1309,
+n23 = 1600,
+n24 = 1579,
+n34 = 1654,
+n123 = 1218,
+n124 = 1222,
+n134 = 1271,
+n234 = 1542,
+n1234 = 1205,
+fontfamily = 'sans',
+fontface = 'plain',
+label.fontface = 'sans',
+label.fontfamily = 'plain',
+category = c("Adult", "Embryo", "Female rear", "Stichosome"),
+cat.fontfamily = 'plain',
+fill = c("orange", "red", "green", "blue"),
+lty = "solid",
+cex = 2,
+cat.cex = 2,
+cat.col = c("orange", "red", "green", "blue")
+);

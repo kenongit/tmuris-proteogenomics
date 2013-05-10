@@ -1,0 +1,64 @@
+Ubuntu 12.04...
+
+SYNAPTIC
+apt-get update
+apt-get upgrade
+apt-get install build-essential
+apt-get install mysql-server
+apt-get install lib32z1-dev
+apt-get install zlibc
+apt-get install libdbd-mysql-perl
+apt-get install samtools
+
+FASTA
+wget and tar
+make -f ../make/Makefile.linux64 all (seems to work)
+../bin/fasta36 -q ../seq/mgstm1.aa ../seq/prot_test.lseg (test binaries)
+ln -s /<absolute_path>/fasta-36.3.5e/bin/fasta36 /usr/local/bin/fasta
+
+GMAP
+wget and tar
+./configure
+make
+make check
+make install
+
+BOWTIE
+wget and unzip bowtie, NOT bowtie2!
+ln -s /<abs_path>/bowtie-0.12.9/bowtie* /usr/local/bin/
+
+MYSQL
+mysql -u root -p
+CREATE USER 'write'@'localhost' IDENTIFIED BY 'write_crypticpassword';
+GRANT ALL PRIVILEGES ON * . * TO 'write'@'localhost';
+CREATE USER 'read'@'localhost' IDENTIFIED BY 'read_crypticpassword';
+GRANT SELECT ON * . * TO 'read'@'localhost';
+
+PASA
+install BLAT binary in /usr/local/bin if using new PASA, which uses blat
+wget and tar
+make
+cp pasa.CONFIG.template conf.txt
+vim conf.txt
+	Add read/write db credentials
+	Choose database name (will be created automagically by flag in PASA command)
+Run test
+	cd PASA_r2012-06-25/sample_data
+	../scripts/Launch_PASA_pipeline.pl -c alignAssembly.config -C -R -g genome_sample.fasta  -t all_transcripts.fasta.clean -T -u all_transcripts.fasta -f FL_accs.txt
+	If test fails
+		URI missing?
+			cpan; install URI
+			apt-get install liburi-perl (better option?)
+Copy sample_data/alignAssembly.config to PASA dir
+	edit db name to pasa_jobs
+
+
+TRINITY
+wget and tar
+make (twice!)
+run trinityrnaseq_r2013-02-25/sample_data/test_Trinity_Assembly/runMe.sh
+	If assembly tests fails:
+		apt-get install python-software-properties
+		add-apt-repository ppa:webupd8team/java
+		apt-get update
+		apt-get install oracle-java7-installer
