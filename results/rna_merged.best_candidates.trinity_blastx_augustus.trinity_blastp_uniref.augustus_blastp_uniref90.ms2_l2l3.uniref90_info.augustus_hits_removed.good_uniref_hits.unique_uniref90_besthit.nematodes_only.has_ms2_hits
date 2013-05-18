@@ -1,3 +1,4 @@
+Trinity_orfs, BLASTX_Trinity_orfs_vs_Augustus, BLASTP_Trinity_vs_UniRef90, BLASTP_top_Augustus_vs_UniRef90, mass_spec_hits, top_UniRef90_protein_info   
 FREm.211012  TMUE_s0032002300|%id:22.47|len:899|eval:3e-30	UniRef90_E5STU3|%id:52.48|len:806|eval:0.0	UniRef90_E5SP41|%id:33.70|len:5225|eval:0.0	ms2:trin_l2|psm:2|psm_uniq:2|ms2:trin_l3|psm:34|psm_uniq:16	UniRef90_E5STU3|Basement membrane proteoglycan|Trichinella spiralis
 ADUm.231729	TMUE_s0030007800|%id:26.92|len:52|eval:1.2	UniRef90_E5S3N9|%id:75.66|len:304|eval:4e-173	UniRef90_B6IGX1|%id:50.55|len:550|eval:1e-180	ms2:trin_l3|psm:4|psm_uniq:2	UniRef90_E5S3N9|Erlin-2|Trichinella spiralis
 STIm.19748	TMUE_s0078004500|%id:34.47|len:264|eval:9e-43	UniRef90_K7I8A4|%id:35.88|len:262|eval:2e-41	UniRef90_E5SXB1|%id:46.27|len:603|eval:0.0	ms2:trin_l3|psm:5|psm_uniq:3	UniRef90_K7I8A4|Uncharacterized protein|Caenorhabditis japonica
